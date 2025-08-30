@@ -1,0 +1,16 @@
+import requests
+from io import StringIO
+
+# URL of the CSV file
+url = ""
+
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/66.0.3359.181 Safari/537.36"
+}
+
+# Fetch the data
+req = requests.get(url, headers=headers)
+data = StringIO(req.text)
